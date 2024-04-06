@@ -6,6 +6,8 @@ import CantidadPokemon from './components/CantidadPokemon';
 import CompraPokemon from './components/CompraPokemon';
 import store from './components/redux/store';
 import {Provider} from 'react-redux';
+import BuscadorPokemon from './components/buscador/BuscadorPokemon';
+import ResultadoPokemon from './components/buscador/ResultadoPokemon';
 
 
 
@@ -35,6 +37,12 @@ function App() {
 
           </div>
         </div>
+        <div className='col-12 mt-4 border-top pt-3'>
+          <BuscadorPokemon></BuscadorPokemon>
+          
+        </div>
+        <div className='col-12'></div>
+        <ResultadoPokemon></ResultadoPokemon>
       </div>
     </div>
     </Provider>

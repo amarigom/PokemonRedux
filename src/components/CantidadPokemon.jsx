@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react';
-import {connect} from 'react-redux';
-import {Component} from 'react';
+import {useSelector} from 'react-redux';
+import game_shop from './redux/reducers/gameShopReducer'
 
-class CantidadPokemon extends Component {
-  render(){
+
+
+
+const CantidadPokemon =()=> { 
+
+  const game_shop1= useSelector((State)=>
+    game_shop
+  );
+  
   return (
     <div>
-      <Fragment>Unidades:{this.props.game_shop.pokemon}</Fragment>
+      <Fragment>Unidades:{game_shop1.pokemon}</Fragment>
     </div>
-  )
-}
-}
- 
-const mapStateToProp= (state)=>{
-  return{
-      game_shop: state.game_shop
-  }
+  );
  }
 
-export default connect(mapStateToProp)(CantidadPokemon)
+export default CantidadPokemon
